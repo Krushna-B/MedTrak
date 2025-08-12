@@ -4,31 +4,12 @@ MedTrak is a lightweight SwiftUI app for tracking daily medications. It lets you
 
 ---
 
-## Highlights (TL;DR for recruiters)
+## Highlights
 
 - **What it is:** An iOS app that helps users remember and track their meds.
 - **Why it matters:** Missed doses are common; MedTrak reduces cognitive load with a simple daily checklist and calendar.
 - **What I built:** Full SwiftUI app + MVVM state, custom UI components, and groundwork for notifications & data persistence.
 - **Tech:** Swift, SwiftUI, MVVM, Xcode. Designed for iOS 16+.
-
----
-
-## Screens / Assets
-
-The project includes app artwork in `Other/Assets.xcassets` (e.g., pill icons and a start screen image). For the GitHub README:
-
-1. Run the app in the iOS Simulator (iPhone 15 or similar).
-2. Capture screenshots of **Start**, **Home (Today)**, **Add Med**, and **All Meds** views.
-3. Save to `docs/screenshots/` and reference them below.
-
-_Example placeholder:_
-
-```
-![Start](docs/screenshots/start.png)
-![Home](docs/screenshots/home.png)
-![Add Med](docs/screenshots/add.png)
-![All Meds](docs/screenshots/all.png)
-```
 
 ---
 
@@ -50,11 +31,11 @@ _Example placeholder:_
 
 - **Pattern:** MVVM with `ObservableObject` state (`MedsViewModel`) injected via `@EnvironmentObject` in `Medicine_TrackerApp.swift`.
 - **Views:** SwiftUI view hierarchy in `Views/` (Home, Add, All, Start).
-- **ViewModel:** `ViewModel/MedicinesViewModel.swift` holds the meds array, sorting/filter helpers, and (in this version) persistence hooks.
+- **ViewModel:** `ViewModel/MedicinesViewModel.swift` holds the meds array, sorting/filter helpers, and persistence hooks.
 - **Models:** `Models/` includes the data model, tab bar, and utilities.
 - **Assets:** `Other/Assets.xcassets` for images and app icons.
 
-**Potential improvements (technical):**
+**Potential improvements:**
 
 - Move persistence to **Core Data** or **SwiftData** with background saves.
 - Rework notifications: request authorization on first run, schedule `UNCalendarNotificationTrigger`s when meds are created.
@@ -84,15 +65,6 @@ _Example placeholder:_
 
 ---
 
-## Tests
-
-- UITests and unit test targets are scaffolded under:
-  - `Medicine TrackerTests/`
-  - `Medicine TrackerUITests/`
-- Add cases for model validation (e.g., day-of-week schedules) and ViewModel helpers (sorting, filtering, remaining pills).
-
----
-
 ## Project Structure
 
 ```
@@ -119,18 +91,7 @@ MedTrak/
 
 ---
 
-## Roadmap
-
-- [ ] Core Data / SwiftData persistence
-- [ ] Robust local notifications per dose schedule
-- [ ] Calendar view (weekly/monthly) with adherence stats
-- [ ] Refill reminders when `remainingPill` is low
-- [ ] CSV import/export & HealthKit (where appropriate)
-- [ ] Accessibility + Localization (EN → ES, FR, etc.)
-
----
-
-## 👤 Author
+## Author
 
 - **Krushna**
 - LinkedIn: https://www.linkedin.com/in/krushna-bhanushali
