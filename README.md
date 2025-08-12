@@ -1,13 +1,11 @@
-
 # MedTrak — iOS Medicine Tracker (SwiftUI)
 
 MedTrak is a lightweight SwiftUI app for tracking daily medications. It lets you add meds with dosage and schedule, view today's tasks at a glance, browse all meds, and (optionally) set local reminders.
 
-This README balances a quick recruiter-friendly overview with the technical details developers want.
-
 ---
 
-## 🚀 Highlights (TL;DR for recruiters)
+## Highlights (TL;DR for recruiters)
+
 - **What it is:** An iOS app that helps users remember and track their meds.
 - **Why it matters:** Missed doses are common; MedTrak reduces cognitive load with a simple daily checklist and calendar.
 - **What I built:** Full SwiftUI app + MVVM state, custom UI components, and groundwork for notifications & data persistence.
@@ -15,13 +13,16 @@ This README balances a quick recruiter-friendly overview with the technical deta
 
 ---
 
-## 📸 Screens / Assets
+## Screens / Assets
+
 The project includes app artwork in `Other/Assets.xcassets` (e.g., pill icons and a start screen image). For the GitHub README:
+
 1. Run the app in the iOS Simulator (iPhone 15 or similar).
 2. Capture screenshots of **Start**, **Home (Today)**, **Add Med**, and **All Meds** views.
 3. Save to `docs/screenshots/` and reference them below.
 
 _Example placeholder:_
+
 ```
 ![Start](docs/screenshots/start.png)
 ![Home](docs/screenshots/home.png)
@@ -31,7 +32,8 @@ _Example placeholder:_
 
 ---
 
-## ✨ Features
+## Features
+
 - **Onboarding / Start**: Friendly intro screen with CTA (`StartView.swift`).
 - **Home (Today)**: Daily greeting, today's meds checklist, quick add. (`HomeView.swift`)
 - **Add Medication**: Name, dosage, start date, days of week, end date, quantity, and more. (`AddMeds View.swift`)
@@ -44,7 +46,8 @@ _Example placeholder:_
 
 ---
 
-## 🧱 Architecture
+## Architecture
+
 - **Pattern:** MVVM with `ObservableObject` state (`MedsViewModel`) injected via `@EnvironmentObject` in `Medicine_TrackerApp.swift`.
 - **Views:** SwiftUI view hierarchy in `Views/` (Home, Add, All, Start).
 - **ViewModel:** `ViewModel/MedicinesViewModel.swift` holds the meds array, sorting/filter helpers, and (in this version) persistence hooks.
@@ -52,6 +55,7 @@ _Example placeholder:_
 - **Assets:** `Other/Assets.xcassets` for images and app icons.
 
 **Potential improvements (technical):**
+
 - Move persistence to **Core Data** or **SwiftData** with background saves.
 - Rework notifications: request authorization on first run, schedule `UNCalendarNotificationTrigger`s when meds are created.
 - Add **WidgetKit** for upcoming doses.
@@ -60,13 +64,15 @@ _Example placeholder:_
 
 ---
 
-## 🛠️ Requirements
+## Requirements
+
 - **Xcode**: 15+ (Swift 5.9+ recommended)
 - **iOS**: 16+ (targets SwiftUI APIs present in this project)
 
 ---
 
-## ▶️ Getting Started (Developers)
+## Getting Started (Developers)
+
 1. Open `MedTrak/Medicine Tracker.xcodeproj` in Xcode.
 2. Select an iPhone simulator (e.g., iPhone 15) and **Run**.
 3. To test notifications (optional):
@@ -78,7 +84,8 @@ _Example placeholder:_
 
 ---
 
-## 🧪 Tests
+## Tests
+
 - UITests and unit test targets are scaffolded under:
   - `Medicine TrackerTests/`
   - `Medicine TrackerUITests/`
@@ -86,7 +93,8 @@ _Example placeholder:_
 
 ---
 
-## 📂 Project Structure
+## Project Structure
+
 ```
 MedTrak/
 └── Medicine Tracker/
@@ -111,7 +119,8 @@ MedTrak/
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
+
 - [ ] Core Data / SwiftData persistence
 - [ ] Robust local notifications per dose schedule
 - [ ] Calendar view (weekly/monthly) with adherence stats
@@ -121,22 +130,9 @@ MedTrak/
 
 ---
 
-## 🔒 Privacy
-All data is stored locally on-device in this version. No analytics, tracking, or backend services are used.
-
----
-
-## 📜 License
-MIT — see `LICENSE`.
-
----
-
 ## 👤 Author
-- **Your Name** — iOS Developer  
-- LinkedIn: https://www.linkedin.com/in/<your-handle>  
-- Email: <you@domain.com>
+
+- **Krushna**
+- LinkedIn: https://www.linkedin.com/in/krushna-bhanushali
 
 ---
-
-## 📣 Recruiter Note
-Happy to discuss the architecture decisions, trade-offs (e.g., CoreData vs SwiftData), and roadmap if this app were shipped to the App Store or integrated with HealthKit.
