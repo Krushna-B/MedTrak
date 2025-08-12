@@ -51,14 +51,14 @@ MedTrak is a lightweight SwiftUI app for tracking daily medications. It lets you
 - **iOS**: 16+ (targets SwiftUI APIs present in this project)
 
 ---
-
+<!-- 
 ## Getting Started (Developers)
 
 1. Open `MedTrak/Medicine Tracker.xcodeproj` in Xcode.
 2. Select an iPhone simulator (e.g., iPhone 15) and **Run**.
 3. To test notifications (optional):
    - In `Notifications.swift`, enable `NotificationManager` (currently commented scaffolding).
-   - Request permission on first launch and schedule sample reminders.
+   - Request permission on first launch and schedule sample reminders. -->
 
 ---
 
