@@ -59,9 +59,6 @@ MedTrak is a lightweight SwiftUI app for tracking daily medications. It lets you
 3. To test notifications (optional):
    - In `Notifications.swift`, enable `NotificationManager` (currently commented scaffolding).
    - Request permission on first launch and schedule sample reminders.
-4. To persist data between launches:
-   - This version includes hooks in `MedsViewModel` for saving/loading.
-   - For production, migrate to Core Data/SwiftData (see Roadmap).
 
 ---
 
@@ -69,24 +66,31 @@ MedTrak is a lightweight SwiftUI app for tracking daily medications. It lets you
 
 ```
 MedTrak/
-└── Medicine Tracker/
-    ├── Medicine_TrackerApp.swift         # App entry; injects MedsViewModel
-    ├── ViewModel/
-    │   └── MedicinesViewModel.swift      # ObservableObject, meds array, helpers
-    ├── Models/
-    │   ├── MedicinesModel.swift          # medicineModel definition
-    │   ├── Tab Bar.swift                 # Custom tab bar
-    │   ├── AddMedsPictureButtons.swift   # (WIP) image helpers
-    │   └── keyboardAdaptive.swift        # Keyboard-aware layout utils
-    ├── Views/
-    │   ├── StartView.swift               # Onboarding
-    │   ├── HomeView.swift                # Today overview
-    │   ├── AddMeds View.swift            # Add Medication form
-    │   ├── AllMeds.swift                 # All medications
-    │   ├── Calender View.swift           # (WIP) calendar UI
-    │   └── ContentView.swift             # Main navigation
-    └── Other/
-        └── Assets.xcassets/              # App icons & imagery
+├── Medicine Tracker/
+│   ├── Models/
+│   │   ├── AddMedsPictureButtons.swift
+│   │   ├── keyboardAdaptive.swift
+│   │   ├── MedicinesModel.swift
+│   │   └── Tab Bar.swift
+│   ├── ViewModel/
+│   │   └── MedicinesViewModel.swift
+│   ├── Views/
+│   │   ├── AddMeds View.swift
+│   │   ├── AllMeds.swift
+│   │   ├── Calender View.swift
+│   │   ├── ContentView.swift
+│   │   ├── GetStarted.swift
+│   │   ├── HomeView.swift
+│   │   ├── ListRowView.swift
+│   │   ├── Notifications.swift
+│   │   └── StartView.swift
+│   ├── Other/
+│   │   └── Assets.xcassets/   # App icons & images
+│   ├── Medicine_TrackerApp.swift
+│   └── Medicine_Tracker.entitlements.xml
+├── Medicine Tracker.xcodeproj/
+├── Medicine TrackerTests/
+└── Medicine TrackerUITests/
 ```
 
 ---
